@@ -1,0 +1,18 @@
+# IDE
+.idea/
+.vscode/
+# cache
+**/__pycache__/
+
+
+# running logs
+logs/
+res/
+
+# env
+.env
+
+# data
+data/
+output/
+wandb/
