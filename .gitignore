@@ -13,6 +13,5 @@ res/
 .env
 
 # data
-data/
 output/
 wandb/
