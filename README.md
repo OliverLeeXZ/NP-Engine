@@ -2,15 +2,16 @@
 <div align="center">
  <img src="./images/webpages/data.png" width="800"/>
 </div>
+
 <div align="center">
-[📃[Paper](http://arxiv.org/abs/2506.10764)]
+
+[📃[Paper](https://arxiv.org/abs/2510.16476)]
 [🌐[Project Page](https://github.com/OliverLeeXZ/NP-Engine)]
 [🤗[Model](https://huggingface.co/OliverLee/Qwen2.5-7B-NP)]
 </div>
 
-
 ## 📣 What's New
-- **[2025.10.14]** We have released NP-Bench in [OliverLeeXZ/NP-Engine](https://huggingface.co/datasets/OPT-Bench/OPT-Bench). 🎉🎉🎉
+- **[2025.10.14]** We have released NP-Bench in [OliverLeeXZ/NP-Engine](https://github.com/OliverLeeXZ/NP-Engine). 🎉🎉🎉
 - **[2025.10.13]** We have released model checkpoint in [OliverLee/Qwen2.5-7B-NP](https://huggingface.co/OliverLee/Qwen2.5-7B-NP). 🎉🎉🎉
 <!-- - **[2025.6.10]** Our OPT-BENCH Paper is released! Check it at 📃[Arxiv: OPT-BENCH](http://arxiv.org/abs/2506.10764) ! Our Dataset will be open-sourced soon! 🎉🎉🎉 -->
 
