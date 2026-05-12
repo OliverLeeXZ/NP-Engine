@@ -1,19 +1,18 @@
-# NP-Engine: Empowering Optimization Reasoning in Large Language Models with Verifiable Synthetic NP Problems
-<div align="center">
- <img src="./images/webpages/data.png" width="800"/>
-</div>
+# Forge: Quality-Aware Reinforcement Learning for NP-Hard Optimization in LLMs
 
 <div align="center">
 
-[📃[Paper](https://arxiv.org/abs/2510.16476)]
+[📃[Paper](https://arxiv.org/abs/2605.08905)]
 [🌐[Project Page](https://github.com/OliverLeeXZ/NP-Engine)]
 [🤗[Model](https://huggingface.co/OliverLee/Qwen2.5-7B-NP)]
 </div>
 
 ## 📣 What's New
+- **[2026.5.8]** We updated NP-Engine by training it from a reasoning model and incorporating more RL algorithms. Check it out at 📃 [arXiv: Forge](https://arxiv.org/abs/2605.08905)!
+- **[2026.4.6]** The Forge (NP-Engine) has been accepted at **ACL 2026**! See you in **San Diego**! 🎉🎉🎉
 - **[2025.10.14]** We have released NP-Bench in [OliverLeeXZ/NP-Engine](https://github.com/OliverLeeXZ/NP-Engine). 🎉🎉🎉
 - **[2025.10.13]** We have released model checkpoint in [OliverLee/Qwen2.5-7B-NP](https://huggingface.co/OliverLee/Qwen2.5-7B-NP). 🎉🎉🎉
-<!-- - **[2025.6.10]** Our OPT-BENCH Paper is released! Check it at 📃[Arxiv: OPT-BENCH](http://arxiv.org/abs/2506.10764) ! Our Dataset will be open-sourced soon! 🎉🎉🎉 -->
+- **[2025.6.10]** Our NP-Engine Paper is released! Check it at 📃[Arxiv: NP-Engine](https://arxiv.org/abs/2510.16476) ! Our Dataset will be open-sourced soon! 🎉🎉🎉
 
 ## 👨‍💻 Todo List
 
@@ -26,7 +25,11 @@
 
 
 ## 🌟 Highlights
+<div align="center">
+ <img src="./images/webpages/spotlight.png" width="800"/>
+</div>
 
+NP-ENGINE evaluates and trains reasoning models on **10 NP-hard optimization tasks** across five categories, including **subset selection** and **path planning**. Its automated pipeline—composed of a **Data Generator**, **Solution Validator**, and **Heuristic Solver**—enables controllable data synthesis, rigorous evaluation, and scalable training. A case study on **Hamiltonian Circuit** demonstrates the model’s ability to find optimal solutions, while OOD evaluations show improved general reasoning capabilities beyond the training tasks.
 
 - **We introduce NP-ENGINE**, a scalable framework that generates near-infinite and hierarchically difficult NP-hard problems within the RLVR paradigm, empowering LLMs' optimization reasoning abilities. NP-ENGINE enables Qwen2.5-7B-Instruct to significantly outperform GPT-4o in optimization reasoning tasks using only 5K training examples.
 
@@ -35,10 +38,6 @@
 - **Through extensive experiments**, we demonstrate that training on NP-ENGINE-DATA enables QWEN2.5-7B-NP to generalize to both reasoning and non-reasoning OOD tasks. We also observe a positive correlation between task diversity and cross-task generalization performance, offering new insights into the scaling behavior of RLVR-based training.
 
 ## 📚 Dataset Statistics
-<div align="center">
- <img src="./images/webpages/data_case.png" width="800"/>
-</div>
-
 
 <div align="center">
  <img src="./images/webpages/data.png" width="800"/>
@@ -70,69 +69,9 @@
 | **Model**               | **89.7**     | **27.8**     | **85.0**        | 43.5            | **99.0**          | **53.8**         | **93.7**         | **79.1**         | **98.2**         | **28.9**         | **93.1**        | **46.6**        |
 | **Delta**               | +78.7        | +24.7        | +45.0           | +23.7           | +32.0            | +19.8            | +67.0            | +63.9            | +94.7            | +27.9            | +63.5           | +32.0           |
 
-<div align="center">
- <img src="./images/webpages/expML.png" width="800"/>
-</div>
-Evaluation Results of LLMs on OPT-BENCH-ML. The column Win Count denotes the win count comparing the performance of LLM optimization using OPT-Agent against the baseline without historical information; IR(w,w.o) represents the improvement rate of OPT-Agent relative to the baseline; and IR(w,init) indicates the improvement relative to the initial solution. Evaluation Results of LLMs on OPT-BENCH-ML.
-<div align="center">
- <img src="./images/webpages/expNP.png" width="800"/>
-</div>
-Evaluation Results of LLMs on OPT-BENCH-NP. The column Win Count denotes the win count comparing performance of LLM optimization using OPT-Agent against the baseline without historical information; Buggy Rate indicates the proportion of tasks where the model fails to produce a valid solution; Rank reflects the relative ranking of the model’s optimization outcomes per task.
-<div align="center">
- <img src="./images/webpages/expdraft.png" width="800"/>
-</div>
-Evaluation Results of LLMs under Draft Settings. Metrics include Buggy Rate, denoting the proportion of invalid solutions; Win Count, comparing OPT-Agent-draft optimization against the baseline without historical information; and IR(d,r), the improvement rate comparing OPT-Agent-draft optimization to OPT-Agent-refine.
-# OPT-BENCH
 
 ## Setup
-Make sure you have ```Python>=3.10``` installed and run:
-```
-pip install -r requirements.txt
-```
 
-## Inference Example
-
-### API Model
-```
-export API_KEY="Your api key"
-export BASE_URL="Your api URL"
-```
-### Open-sourced Model
-
-We recommend that deploy model using lmdeploy.
-```
-export export API_KEY=EMPTY
-export BASE_URL="Your model URL"
-```
-### For ML task
-```
-cd OPT-BENCH
-python run_exp.py --data_dir OPTAgent/example_tasks/spaceship-titanic --steps 1 --base_model gpt-4o-2024-08-06
-```
-
-### For NP task 
-```
-python run_exp.py --data_dir OPTAgent/example_tasks/hamiltonian-cycle --task_field NP --steps <your steps default is 10> --base_model <your model default is 4o>
-```
-
-## For task scale up
-```
-https://huggingface.co/datasets/OPT-Bench/OPT-Bench
-```
-### For NP task
-Take ```OPTAgent/example_tasks/hamiltonian-cycle``` as the example.
-1. Add your date in ```OPTAgent/example_tasks``` dir.
-2. Prepare your own task. ``` task description in ## Description section, metric in ## Metric, submission format in ## Submission Format ```.
-3. Prepare ``` question.json```. Your question should in ```"question"``` formatted as dict.
-4. prepare ```validation.py```. The rule-based validation py script for your task.
-
-Run the ```run_exp.py``` for validation.
-
-### For ML task
-Take ```OPTAgent/example_tasks/spaceship-titanic``` as the example.
-1. Add your date in ```OPTAgent/example_tasks``` dir.
-2. Prepare your own task. ``` task description in ## Description section, metric in ## Metric, dataset description in ## Dataset Description, submission format in ## Submission Format ```.
-3. You should prepare ```init.py in ## Code Template``` for ```OPTAgent-refine```, which is optional for ```OPTAgent-draft```.
 
 
 ## 🖊️ Citation
@@ -140,14 +79,14 @@ Take ```OPTAgent/example_tasks/spaceship-titanic``` as the example.
 If you find this work helpful, please consider to **star🌟** this repo and cite this paper. Thanks for your support!
 
 ```bib
-@misc{li2025optbenchevaluatingllmagent,
-      title={OPT-BENCH: Evaluating LLM Agent on Large-Scale Search Spaces Optimization Problems}, 
-      author={Xiaozhe Li and Jixuan Chen and Xinyu Fang and Shengyuan Ding and Haodong Duan and Qingwen Liu and Kai Chen},
-      year={2025},
-      eprint={2506.10764},
+@misc{li2026forgequalityawarereinforcementlearning,
+      title={Forge: Quality-Aware Reinforcement Learning for NP-Hard Optimization in LLMs}, 
+      author={Xiaozhe Li and Xinyu Fang and Shengyuan Ding and Yang Li and Linyang Li and Haodong Duan and Qingwen Liu and Kai Chen},
+      year={2026},
+      eprint={2605.08905},
       archivePrefix={arXiv},
       primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2506.10764}, 
+      url={https://arxiv.org/abs/2605.08905}, 
 }
 ```
 
