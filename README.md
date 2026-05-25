@@ -8,6 +8,7 @@
 </div>
 
 ## 📣 What's New
+- **[2026.5.25]** We release our training data in [OliverLee/NP](http://huggingface.co/datasets/OliverLee/NP). 🎉🎉🎉
 - **[2026.5.8]** We updated NP-Engine by training it from a reasoning model and incorporating more RL algorithms. Check it out at 📃 [arXiv: Forge](https://arxiv.org/abs/2605.08905)!
 - **[2026.4.6]** The Forge (NP-Engine) has been accepted at **ACL 2026**! See you in **San Diego**! 🎉🎉🎉
 - **[2025.10.14]** We have released NP-Bench in [OliverLeeXZ/NP-Engine](https://github.com/OliverLeeXZ/NP-Engine). 🎉🎉🎉
@@ -19,8 +20,8 @@
 - ✅ Paper Release
 - ✅ Checkpoint Release
 - ✅ NP-Bench Release
-- ⏳ RLVR Training Code Release [*Coming Soon*]
-- ⏳ Training Data Release [*Coming Soon*]
+- ✅ RLVR Training Code Release
+- ✅ Training Data Release
 
 
 
