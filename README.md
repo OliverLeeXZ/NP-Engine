@@ -91,7 +91,7 @@ If you find this work helpful, please consider to **star🌟** this repo and cit
 }
 ```
 
-<picture>
+<!-- <picture>
   <source
     media="(prefers-color-scheme: dark)"
     srcset="
@@ -108,4 +108,4 @@ If you find this work helpful, please consider to **star🌟** this repo and cit
     alt="Star History Chart"
     src="https://api.star-history.com/svg?repos=OliverLeeXZ/NP-Engine&type=Date"
   />
-</picture>
+</picture> -->
