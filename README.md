@@ -8,6 +8,7 @@
 </div>
 
 ## 📣 What's New
+- **[2026.05.26]** Our NP reasoning task has been integrated into verl. Get started quickly with [NP Task](https://github.com/verl-project/verl/pull/6465)!
 - **[2026.5.25]** We release our training data in [OliverLee/NP](http://huggingface.co/datasets/OliverLee/NP). 🎉🎉🎉
 - **[2026.5.8]** We updated NP-Engine by training it from a reasoning model and incorporating more RL algorithms. Check it out at 📃 [arXiv: Forge](https://arxiv.org/abs/2605.08905)!
 - **[2026.4.6]** The Forge (NP-Engine) has been accepted at **ACL 2026**! See you in **San Diego**! 🎉🎉🎉
